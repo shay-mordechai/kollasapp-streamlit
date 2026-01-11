@@ -1,0 +1,10 @@
+services:
+  media-server:
+    image: nginx:alpine
+    container_name: kollas-media-server
+    volumes:
+      # Mapping your rclone mount to the Nginx content folder
+      - /home/shay0129/Music/kollas_mount:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped

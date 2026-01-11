@@ -1,7 +1,47 @@
+# ------------------------------------------------
+# Security & Secrets (CRITICAL)
+# ------------------------------------------------
 .streamlit/secrets.toml
 config/secret_files/*
+.env
+
+# ------------------------------------------------
+# Python & Runtime
+# ------------------------------------------------
 __pycache__/
 *.pyc
-.env
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# ------------------------------------------------
+# Project Data & Logs
+# ------------------------------------------------
 data/
 scripts/batch_indexer.py
+
+# SQLite Database (Local only - do not commit!)
+*.db
+*.sqlite3
+kollas.db
+
+# Logs
+*.log
+streamlit.log
+
+# ------------------------------------------------
+# OS & Editors
+# ------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
+
+# ------------------------------------------------
+# Specific Project Files
+# ------------------------------------------------
+# Note: server_config.json is NOT ignored because the script
+# pushes updates to it.

@@ -1,0 +1,21 @@
+[server]
+port = 8501
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+# Limit uploads to 20MB to prevent RAM spikes on 1GB instance
+maxUploadSize = 20
+
+[browser]
+# Disable usage stats to save network/cpu
+gatherUsageStats = false
+
+[runner]
+# Disable magic to reduce overhead
+magicEnabled = false
+# Improve UX response time
+fastReruns = true
+
+[global]
+# Prevent app reload on every source file save (save CPU)
+developmentMode = false
